@@ -1,8 +1,6 @@
 package com.github.lab.common;
 
 
-import com.github.lab.dal.UserDO;
-import com.github.lab.dto.UserDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
@@ -14,13 +12,4 @@ import org.mapstruct.factory.Mappers;
 public interface ModelConvector {
 
     ModelConvector INSTANCE = Mappers.getMapper(ModelConvector.class);
-
-    /**
-     * DO->DTO
-     * @param userDO 数据库模型
-     * @return dto模型
-     */
-    UserDTO convert(UserDO userDO);
-
-
 }

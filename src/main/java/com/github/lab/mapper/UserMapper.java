@@ -7,4 +7,5 @@ import com.github.lab.dal.UserDO;
  * @author zhaojiejun
  */
 public interface UserMapper extends BaseMapper<UserDO> {
+
 }

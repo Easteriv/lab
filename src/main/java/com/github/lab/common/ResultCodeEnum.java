@@ -10,7 +10,9 @@ public enum ResultCodeEnum {
     /**
      * 系统异常
      */
-    OK("00000","success");
+    OK("00000", "success"),
+    FAIL("00001", "system error"),
+    DATA_IS_NOT_EXIST("00001", "数据不存在");
 
     private final String errorCode;
     private final String errorMsg;
