@@ -1,29 +1,27 @@
 package com.github.lab.dal;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.Data;
+import lombok.ToString;
 
 /**
  * @author zhaojiejun
- * @date 2021/1/7 8:25 下午
+ * @date 2021/5/20 11:38 下午
  **/
-@Data
-@TableName("user")
-public class UserDO {
+@ToString
+@TableName("dc_user")
+public class UserDO extends AbstractDO{
+
+    private static final long serialVersionUID = -6304406578973344070L;
     /**
-     * 主键id
+     * 用户名
      */
-    private Long id;
+    private String userName;
     /**
      * 姓名
      */
-    private String name;
+    private String fullName;
     /**
-     * 年龄
+     * 密码
      */
-    private Integer age;
-    /**
-     * 邮箱
-     */
-    private String email;
+    private String passWord;
 }
