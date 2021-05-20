@@ -20,8 +20,5 @@ public class GlobalDefaultExceptionHandler {
     @ResponseBody
     public void defaultExceptionHandler(HttpServletRequest request, Exception e) {
         log.error("biz exception：{}", e.getMessage());
-        //发送通知邮件
-        // System.out.println("发送通知邮件");
-        System.out.println("捕捉到了异常啦");
     }
 }
