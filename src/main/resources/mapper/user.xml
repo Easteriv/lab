@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.lab.mapper.UserMapper">
+
+    <!--查询出所有数据-->
+    <select id="getUser" parameterType="long" resultType="com.github.lab.dal.UserDO">
+        SELECT * FROM dc_user where id = #{id};
+    </select>
+</mapper>

@@ -2,7 +2,9 @@ package com.github.lab.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.github.lab.dal.UserDO;
-import org.mapstruct.Mapper;
+import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
  * @author zhaojiejun
@@ -10,4 +12,10 @@ import org.mapstruct.Mapper;
  **/
 @Mapper
 public interface UserMapper extends BaseMapper<UserDO> {
+    /**
+     * 获取用户
+     * @param id
+     * @return
+     */
+    UserDO getUser(long id);
 }

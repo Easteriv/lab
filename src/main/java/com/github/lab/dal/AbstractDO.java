@@ -2,7 +2,11 @@ package com.github.lab.dal;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -11,8 +15,10 @@ import java.util.Date;
  * @author zhaojiejun
  * @date 2021/5/20 11:39 下午
  **/
-@Data
-public class AbstractDO implements Serializable {
+@Setter
+@Getter
+@ToString
+public class AbstractDO<T extends Model<T>> extends Model<T> implements Serializable {
 
     private static final long serialVersionUID = 8141763985058987273L;
     /**
